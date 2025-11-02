@@ -7,7 +7,7 @@
 
 #define RESET   "\x1b[0m"
 
-/*
+
 int Four_in_a_row(char current_colour, int width,int height, char[width][height]){
     int Total_in_a_row =0;
 
@@ -37,7 +37,7 @@ int Four_in_a_row(char current_colour, int width,int height, char[width][height]
     }
 
 }
-*/
+
 void print_game(char board[Width][Height]){
     
     for(int i = 0;i<Width;i++){
