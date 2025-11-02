@@ -84,10 +84,21 @@ int main(){
     populate_board(board);
 
 
-    int input = 4;
+    int input;
     char col;
     int counter = 1;
     while(1){
+        input = 9;
+        print_game(board);
+        if(counter%2==0){
+            printf(BLUE"Enter your move: \n" RESET); 
+            col = 'b';}
+        else{
+            printf(RED"Enter your move: \n" RESET); 
+            col = 'r';
+        }
+        scanf("%d",&input);
+
         
         if(input<1){
             printf("enter a number between 1 and 6");
@@ -97,18 +108,8 @@ int main(){
         else if(input>7){
             break;
         }
-        else{
-        print_game(board);
-        if(counter%2==0){
-            printf(BLUE"Enter your move: \n" RESET); scanf("%d", &input);
-            col = 'b';}
-        else{
-            printf(RED"Enter your move: \n" RESET); scanf("%d", &input);
-            col = 'r';}
+
         place(col,input,board);
         counter++;
         }
     }
-
-}
-
