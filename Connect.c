@@ -8,36 +8,6 @@
 #define RESET   "\x1b[0m"
 
 
-int Four_in_a_row(char current_colour, int width,int height, char[width][height]){
-    int Total_in_a_row =0;
-
-    int current_position[Dimension] ={width, height};
-
-    int next_position[Dimension];
-
-    
-    int possible_moves[2][] = {
-        {-1,0},
-        {-1,-1},
-        {0,1},
-        {-1,1},
-        {0,1}
-    };
-    int current_movement[Dimension] = {0,0};
-
-    int movement_counter = 0;
-
-    while(Total_in_a_row<4 || (current_position[0] != 0 && current_position[1]!= 0)){
-        if(movement_counter==5){
-            movement_counter = 0;
-        }
-        next_position = {current_position[0] + possible_moves[movement_counter][0] , current_position[1] + possible_moves[movement_counter][1];
-
-
-    }
-
-}
-
 void print_game(char board[Width][Height]){
     
     for(int i = 0;i<Width;i++){
