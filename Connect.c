@@ -47,6 +47,15 @@ void place(char colour,int column, char board[Width][Height]){
     }
     board[i-1][column] = colour;
 }
+int check_row_counter(int row_count[6]){
+    for(int i = 0;i<7;i++){
+        if(row_count[i]<7)
+            return 1;
+        else 
+            return 0;
+    }
+}
+
 
 int main(){
 
